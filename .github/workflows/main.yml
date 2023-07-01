@@ -17,9 +17,9 @@ jobs:
           
       - name: checkout repo
         uses: action/checkout@v3
-        with:
-          # token: ${{ secrets.MY_TOKEN }}
-          repository: aya5899/gotest
+#         with:
+#           # token: ${{ secrets.MY_TOKEN }}
+#           # repository: aya5899/gotest
       
       - name: build test on a container
         run: docker build -t gotest .
