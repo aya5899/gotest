@@ -15,14 +15,14 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
-        - name: test
-          run: echo hello
+      - name: test
+        run: echo hello
           
-#       - name: checkout repo
-#         uses: action/checkout@v3
+      - name: checkout repo
+        uses: action/checkout@v3
       
-#       - name: build test on a container
-#         run: docker build -t gotest .
+      - name: build test on a container
+        run: docker build -t gotest .
         
-#       - name: run test on a container 
-#         run: docker run gotest
+      - name: run test on a container 
+        run: docker run gotest
