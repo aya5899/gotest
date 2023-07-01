@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo hello
+          
+      - name: checkout repo
+        uses: actions/checkout@v3
+#         with:
+#           # token: ${{ secrets.MY_TOKEN }}
+#           # repository: aya5899/gotest
+      
+      - name: build test on a container
+        run: docker build -t gotest .
+        
+      - name: run test on a container 
+        run: docker run gotest
