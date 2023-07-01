@@ -10,9 +10,6 @@ on:
 
 jobs:
   build:
-    permissions:
-      contents: read
-      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: test
@@ -20,6 +17,8 @@ jobs:
           
       - name: checkout repo
         uses: action/checkout@v3
+        with:
+          token: ${{ secrets.MY_TOKEN }}
       
       - name: build test on a container
         run: docker build -t gotest .
