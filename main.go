@@ -8,6 +8,12 @@ import (
 )
 
 func main() {
-	fmt.Println(calc.Addint(3, 5))
-	fmt.Println(compare.Max(3, 5))
+	fmt.Println("==== main start ====")
+	a := 3
+	b := 5
+	fmt.Printf("Addint(%d, %d) = ", a, b)
+	fmt.Println(calc.Addint(a, b))
+	fmt.Printf("Max(%d, %d) = ", a, b)
+	fmt.Println(compare.Max(a, b))
+	fmt.Println("==== main  end  ====")
 }
