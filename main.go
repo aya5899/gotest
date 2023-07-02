@@ -11,9 +11,7 @@ func main() {
 	fmt.Println("==== main start ====")
 	a := 3
 	b := 5
-	fmt.Printf("Addint(%d, %d) = ", a, b)
-	fmt.Println(calc.Addint(a, b))
-	fmt.Printf("Max(%d, %d) = ", a, b)
-	fmt.Println(compare.Max(a, b))
-	fmt.Println("==== main  end  ====")
+	fmt.Printf("Addint(%d, %d) = %d\n", a, b, calc.Addint(a, b))
+	fmt.Printf("Max(%d, %d) = %d\n", a, b, compare.Max(a, b))
+	fmt.Println("==== main   end ====")
 }
