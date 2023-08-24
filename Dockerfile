@@ -4,6 +4,7 @@ ENV test=TEST
 ENV test2=test2
 ENV test3=TEST3
 ENV test4=TEST4
+ENV test5=TEST5
 WORKDIR /go/src/github.com/aya5899/gotest
 COPY . .
 ENTRYPOINT go test -v ./...
