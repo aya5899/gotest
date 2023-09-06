@@ -16,8 +16,11 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v3
         with:
+          ref: test
           fetch-tags: true
           fetch-depth: 0
+      - name: check current branch
+        run: git branch
 #         with:
 #           # token: ${{ secrets.MY_TOKEN }}
 #           # repository: aya5899/gotest
