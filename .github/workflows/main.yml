@@ -15,8 +15,8 @@ jobs:
         run: echo hello
       - name: checkout repo
         uses: actions/checkout@v3
-      - name: get tags
-        run: git fetch --tags origin
+        with:
+          ref: v0.1
 #         with:
 #           # token: ${{ secrets.MY_TOKEN }}
 #           # repository: aya5899/gotest
