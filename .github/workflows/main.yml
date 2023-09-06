@@ -18,6 +18,8 @@ jobs:
         with:
           fetch-tags: true
           fetch-depth: 0
+      - name: check current branch
+        run: git branch
 #         with:
 #           # token: ${{ secrets.MY_TOKEN }}
 #           # repository: aya5899/gotest
